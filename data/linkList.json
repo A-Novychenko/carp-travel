@@ -1,0 +1,22 @@
+[
+  {
+    "name": "About",
+    "href": "#about"
+  },
+  {
+    "name": "Services",
+    "href": "#services"
+  },
+  {
+    "name": "Career",
+    "href": "#career"
+  },
+  {
+    "name": "Gallery",
+    "href": "#gallery"
+  },
+  {
+    "name": "Contacts",
+    "href": "#contacts"
+  }
+]
