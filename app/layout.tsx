@@ -3,7 +3,10 @@ import {Inter} from "next/font/google";
 import "./globals.css";
 import {Header} from "@/components/sections/Header/Header";
 
-const inter = Inter({subsets: ["latin"]});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "700"],
+});
 
 export const metadata: Metadata = {
   title: "Carp Travel",

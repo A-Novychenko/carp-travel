@@ -1,0 +1,7 @@
+.backdrop {
+  @apply fixed top-0 left-0 w-screen h-screen bg-bgcMenu backdrop-blur-xl25px z-10;
+}
+
+.content_box {
+  @apply flex justify-between h-full items-center bg-error;
+}
