@@ -1,0 +1,22 @@
+.slogan {
+  @apply flex justify-end text-right text-12 font-extralight leading-2 tracking-[2.4px] pb-6;
+}
+
+.btn {
+  @apply text-20 font-extralight leading-0.85 uppercase opacity-50;
+}
+
+.active_btn {
+  @apply text-20 font-medium leading-0.85 uppercase flex items-center;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+
+    background-image: url("../../../public/activeIcon.svg");
+    background-size: cover;
+  }
+}

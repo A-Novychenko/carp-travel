@@ -1,0 +1,9 @@
+@layer {
+  .label {
+    @apply text-12 font-extralight leading-2 tracking-[2.4px] pb-1;
+  }
+}
+
+.input {
+  @apply text-justify text-13 font-extralight leading-[1.85] pl-2 mb-4 bg-bgc-input;
+}

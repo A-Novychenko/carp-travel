@@ -2,7 +2,9 @@ import {GallerySlider} from "@/components/elements/GallerySlider/GallerySlider";
 
 export const Gallery = () => (
   <section>
-    <h2>OUR GALLERY</h2>
-    <GallerySlider />
+    <div className="ui-container">
+      <h2>OUR GALLERY</h2>
+      <GallerySlider />
+    </div>
   </section>
 );

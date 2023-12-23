@@ -8,14 +8,12 @@ import {Services} from "@/components/sections/Services/Services";
 export default function Home() {
   return (
     <main>
-      <div className="ui-container">
-        <Hero />
-        <About />
-        <Services />
-        <Career />
-        <Gallery />
-        <Contacts />
-      </div>
+      <Hero />
+      <About />
+      <Services />
+      <Career />
+      <Gallery />
+      <Contacts />
     </main>
   );
 }

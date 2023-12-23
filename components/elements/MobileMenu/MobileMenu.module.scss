@@ -1,5 +1,9 @@
+.menu_btn {
+  @apply flex justify-center items-center text-14 leading-normal tracking-[1.4px] uppercase;
+}
+
 .backdrop {
-  @apply fixed top-0 left-0 w-screen h-screen bg-bgcMenu backdrop-blur-xl25px z-10;
+  @apply fixed top-0 left-0 w-screen h-screen bg-bgc-menu backdrop-blur-xl25px z-10;
 }
 
 .content_box {

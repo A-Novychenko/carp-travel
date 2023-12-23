@@ -16,7 +16,7 @@ import "swiper/css/autoplay";
 
 export const GallerySlider = () => (
   <>
-    <Swiper modules={[A11y]} slidesPerView={1} width={1000} loop>
+    <Swiper modules={[A11y]} slidesPerView={1} loop>
       {galleryData &&
         galleryData.map(({path, title}, idx) => (
           <SwiperSlide key={idx}>
