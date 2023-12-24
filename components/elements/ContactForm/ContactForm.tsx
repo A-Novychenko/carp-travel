@@ -2,30 +2,89 @@
 
 import {useForm, SubmitHandler} from "react-hook-form";
 
+import {IncorrectIcon} from "@/components/icons/IncorrectIcon";
+
+import styles from "./ContactForm.module.scss";
+
 export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    watch,
     formState: {errors},
-  } = useForm<ContactFormInputs>();
-  const onSubmit: SubmitHandler<ContactFormInputs> = (data) =>
-    console.log(data);
+  } = useForm<ChooseUsForm>();
+  const onSubmit: SubmitHandler<ChooseUsForm> = (data) => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} style={{color: "red"}}>
-      <label>Full name</label>
-      <input type="text" {...register("name", {required: true})} />
-      {errors.name && <span>This field is required</span>}
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <div className="flex flex-col">
+        <label className={styles.label}>
+          <span className="pb-1">Full name</span>
+          <div className="relative">
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="John Smith"
+              style={{color: errors.name ? "#FF5757" : "#FFF"}}
+              {...register("name", {
+                required: {
+                  value: true,
+                  message: "Name is required",
+                },
+                pattern: {
+                  value: /^[A-Za-z\s]+$/,
+                  message: "Incorrect name",
+                },
+              })}
+            />
+            {errors.name && (
+              <div className={styles.error}>
+                <IncorrectIcon />
+                <span>{errors.name.message}</span>
+              </div>
+            )}
+          </div>
+        </label>
 
-      <label>E-mail</label>
-      <input type="text" {...register("email", {required: true})} />
-      {errors.email && <span>This field is required</span>}
+        <label className={styles.label}>
+          <span className="pb-1">E-mail</span>
+          <div className="relative">
+            <input
+              className={styles.input}
+              type="text"
+              placeholder="johnsmith@email.com"
+              style={{color: errors.email ? "#FF5757" : "#FFF"}}
+              {...register("email", {
+                required: {
+                  value: true,
+                  message: "Email is required",
+                },
+                pattern: {
+                  value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i,
+                  message: "Incorrect email",
+                },
+              })}
+            />
+            {errors.email && (
+              <div className={styles.error}>
+                <IncorrectIcon />
+                <span>{errors.email.message}</span>
+              </div>
+            )}
+          </div>
+        </label>
 
-      <label>Message</label>
-      <textarea {...register("message")} />
+        <label className={styles.label}>
+          <span className="pb-1">Message</span>
+          <textarea
+            className={`${styles.input} w-280 h-[196px] resize-none p-2 block`}
+            {...register("message")}
+          />
+        </label>
+      </div>
 
-      <button type="submit">Send</button>
+      <button className={styles.send_btn} type="submit">
+        Send
+      </button>
     </form>
   );
 };

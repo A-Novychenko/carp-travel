@@ -1,0 +1,39 @@
+.section_bg {
+  @apply relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 100%;
+
+    background-image: linear-gradient(
+        rgba(2, 15, 8, 0.75),
+        rgba(2, 15, 8, 0.75)
+      ),
+      url("../../../public/bgImg/contacts.jpg");
+    background-size: cover;
+    background-position: 30%;
+
+    z-index: -1;
+  }
+}
+
+.wrap {
+  @apply flex text-right text-14 font-normal leading-[1.71] gap-5 justify-end pb-6;
+}
+
+.contact_type {
+  @apply text-12 font-extralight leading-[1.67] w-[81px] text-left;
+}
+
+.follow_use_wrap {
+  @apply flex flex-row-reverse text-14 font-normal leading-[1.71] gap-5 justify-start pb-3;
+}
+
+.follow_use {
+  @apply text-12 font-extralight leading-[1.67];
+}

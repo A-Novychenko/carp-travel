@@ -152,7 +152,7 @@ export const ChooseUsForm = () => {
       </div>
 
       <button
-        className={`ml-auto text-30 font-medium uppercase transition-all delay-300 ease-in-out ${
+        className={`ml-auto text-30 font-medium uppercase transition-all delay-300 ease-linear ${
           !consentValue ? "opacity-20" : "hover:scale-110 focus:scale-110"
         }`}
         type="submit"

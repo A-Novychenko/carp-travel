@@ -1,22 +1,22 @@
 [
   {
     "name": "About",
-    "href": "#about"
+    "to": "about"
   },
   {
     "name": "Services",
-    "href": "#services"
+    "to": "services"
   },
   {
     "name": "Career",
-    "href": "#career"
+    "to": "career"
   },
   {
     "name": "Gallery",
-    "href": "#gallery"
+    "to": "gallery"
   },
   {
     "name": "Contacts",
-    "href": "#contacts"
+    "to": "contacts"
   }
 ]

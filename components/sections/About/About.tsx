@@ -1,7 +1,7 @@
 import styles from "./About.module.scss";
 
 export const About = () => (
-  <section className={`${"ui-section"} ${styles.section_bg}`}>
+  <section id="about" className={`${"ui-section"} ${styles.section_bg}`}>
     <div className="ui-container">
       <h2 className="ui-title pb-2">
         WHO <span className="ui-title-accent">WE ARE</span>

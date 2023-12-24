@@ -1,0 +1,15 @@
+.label {
+  @apply text-12 font-extralight leading-2 tracking-[2.4px] pb-6 last:pb-4;
+}
+
+.input {
+  @apply text-justify text-13 font-extralight leading-[1.85] w-full px-2 bg-bgc-input placeholder:opacity-20;
+}
+
+.error {
+  @apply absolute -bottom-6 right-0 flex items-center justify-end gap-1 text-12 font-extralight text-error tracking-[2.4px] leading-2;
+}
+
+.send_btn {
+  @apply block ml-auto text-30 font-medium uppercase transition-all delay-300 ease-linear hover:scale-110 focus:scale-110;
+}

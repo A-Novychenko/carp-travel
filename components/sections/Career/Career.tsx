@@ -4,7 +4,7 @@ import whyUseData from "@/data/whyUsData.json";
 import styles from "./Career.module.scss";
 
 export const Career = () => (
-  <section>
+  <section id="career">
     <div className={`${"ui-section"} ${styles.section_bg}`}>
       <div className="ui-container">
         <h2 className="ui-title">
