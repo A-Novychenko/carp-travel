@@ -8,6 +8,12 @@ body {
   @apply bg-bgc50 text-primary font-normal text-18;
 }
 
+:focus {
+  outline-color: #56dd61;
+  outline-width: 1px;
+  outline-style: solid;
+}
+
 .ui-container {
   @apply container xs:w-full xs:max-w-full sm:mx-auto sm:w-mob sm:max-w-full md:w-tab lg:w-desc;
 }

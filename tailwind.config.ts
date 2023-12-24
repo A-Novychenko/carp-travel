@@ -33,6 +33,7 @@ const config: Config = {
       "bgc-button": "rgba(255, 255, 255, 0.10)",
       "bgc-input": "rgba(255, 255, 255, 0.05)",
       "count-slide-dark": "rgba(255, 255, 255, 0.20)",
+      outline: "#56dd61",
     },
     fontSize: {
       "10": "10px",

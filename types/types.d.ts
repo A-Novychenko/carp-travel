@@ -2,7 +2,7 @@ type ChooseUsForm = {
   name: string;
   email: string;
   position: string;
-  phone: string;
+  phoneNumber: string;
   message: string;
   consent: string;
 };
