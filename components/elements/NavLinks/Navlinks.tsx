@@ -3,13 +3,11 @@
 import {Link, scroller} from "react-scroll";
 
 import links from "@/data/linkList.json";
+import React from "react";
 
-export const Navlinks = ({
+export const Navlinks: React.FC<INavlinksProps> = ({
   handleCloseMenu,
   handleCloseMenuOnBackdrop,
-}: {
-  handleCloseMenu: () => void;
-  handleCloseMenuOnBackdrop: (e: React.MouseEvent) => void;
 }) => {
   const scrollTo = () => {
     scroller.scrollTo("scroll-to-element", {
@@ -23,7 +21,9 @@ export const Navlinks = ({
     <nav>
       <ul
         className="flex flex-col gap-12 items-center"
-        onClick={handleCloseMenuOnBackdrop}
+        onClick={(e: React.MouseEvent) =>
+          handleCloseMenuOnBackdrop ? handleCloseMenuOnBackdrop(e) : null
+        }
       >
         {links &&
           links.map(({name, to}, idx) => (
@@ -35,7 +35,7 @@ export const Navlinks = ({
                 smooth={true}
                 duration={800}
                 onClick={() => {
-                  handleCloseMenu();
+                  handleCloseMenu ? handleCloseMenu() : null;
                   scrollTo();
                 }}
               >

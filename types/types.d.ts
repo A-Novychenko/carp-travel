@@ -12,3 +12,8 @@ type ContactFormInputs = {
   email: string;
   message: string;
 };
+
+interface INavlinksProps {
+  handleCloseMenu?: () => void;
+  handleCloseMenuOnBackdrop?: (e: React.MouseEvent) => void;
+}
