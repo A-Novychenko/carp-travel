@@ -41,7 +41,7 @@ export const MobileMenu = () => {
           >
             <div className="ui-container">
               <button
-                className="block absolute top-[43px] right-[20px]"
+                className="block absolute top-[43px] right-[20px] text-14 tracking-[1.4px] uppercase"
                 onClick={handleCloseMenu}
               >
                 Close

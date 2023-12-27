@@ -4,6 +4,13 @@ export const SlideNextButton = () => {
   const swiper = useSwiper();
 
   return (
-    <button onClick={() => swiper.slideNext()}>Slide to the next slide</button>
+    <div className="absolute bottom-[17px] right-[37px] z-50">
+      <button
+        className="text-33 font-thin leading-normal link-transition"
+        onClick={() => swiper.slideNext()}
+      >
+        NEXT
+      </button>
+    </div>
   );
 };

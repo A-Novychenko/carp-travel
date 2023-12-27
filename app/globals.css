@@ -20,13 +20,13 @@ body {
 
 @layer components {
   .ui-section {
-    @apply py-14;
+    @apply py-14 md:py-16;
   }
 }
 
 @layer components {
   .ui-title {
-    @apply text-40 font-thin leading-1.4 tracking-[-1.6px] uppercase pb-6;
+    @apply text-40 font-thin leading-1.4 tracking-[-1.6px] uppercase pb-6 md:text-67 md:leading-normal md:tracking-[-2.68px];
   }
 }
 

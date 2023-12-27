@@ -2,29 +2,68 @@
 
 import Image from "next/image";
 import {Swiper, SwiperSlide} from "swiper/react";
-import {A11y} from "swiper/modules";
+import {A11y, EffectCreative} from "swiper/modules";
 
 import {SlideNextButton} from "./SlideNextButton";
 import {SlidePrevButton} from "./SlidePrevButton";
+
 import {galleryData} from "@/data/galleryData";
 
 import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
-import "swiper/css/autoplay";
+import "swiper/css/effect-creative";
 
 export const GallerySlider = () => (
-  <>
-    <Swiper modules={[A11y]} slidesPerView={1} loop>
-      {galleryData &&
-        galleryData.map(({path, title}, idx) => (
-          <SwiperSlide key={idx}>
-            <Image src={path} alt={title} width={683} height={437} />
-            <SlidePrevButton />
-            <SlideNextButton />
-          </SwiperSlide>
-        ))}
-    </Swiper>
-  </>
+  <Swiper
+    modules={[A11y, EffectCreative]}
+    slidesPerView={1.5}
+    loop
+    centeredSlides
+    speed={600}
+    effect={"creative"}
+    style={{position: "relative"}}
+    creativeEffect={{
+      limitProgress: 1,
+      prev: {
+        scale: 0.29,
+        translate: ["-70%", 0, 0],
+      },
+      next: {
+        scale: 0.29,
+        translate: ["70%", 0, 0],
+      },
+    }}
+    breakpoints={{
+      768: {
+        spaceBetween: 146,
+        width: 703,
+        height: 294,
+      },
+    }}
+  >
+    {galleryData &&
+      [...galleryData, ...galleryData].map(({path, title}, idx) => (
+        <SwiperSlide key={idx}>
+          {({isActive}) => (
+            <div
+              className={`w-[415px] h-[294px] ${
+                !isActive
+                  ? "md:relative md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-full md:after:bg-bgc75 md:shadow-img-gallery"
+                  : ""
+              }`}
+            >
+              <Image
+                src={path}
+                alt={title}
+                width={280}
+                height={187}
+                className="block w-full h-full object-cover"
+              />
+            </div>
+          )}
+        </SwiperSlide>
+      ))}
+
+    <SlidePrevButton />
+    <SlideNextButton />
+  </Swiper>
 );

@@ -1,5 +1,5 @@
 .section_bg {
-  @apply relative;
+  @apply relative md:pb-16;
 
   &::after {
     position: absolute;
@@ -16,6 +16,7 @@
       ),
       url("../../../public/bgImg/gallery.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: 30%;
 
     z-index: -1;

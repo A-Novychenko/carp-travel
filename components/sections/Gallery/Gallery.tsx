@@ -8,9 +8,10 @@ import Image from "next/image";
 export const Gallery = () => (
   <section id="gallery" className={`${"ui-section"} ${styles.section_bg}`}>
     <div className="ui-container">
-      <h2 className="ui-title">
+      <h2 className="ui-title pb-[72px] text-center">
         OUR <span className="ui-title-accent">GALLERY</span>
       </h2>
+
       <ul className="block md:hidden">
         {galleryData &&
           galleryData.map(({path, title}, idx) => (
@@ -19,6 +20,7 @@ export const Gallery = () => (
             </li>
           ))}
       </ul>
+
       <div className="hidden md:block">
         <GallerySlider />
       </div>

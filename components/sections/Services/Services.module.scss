@@ -1,13 +1,20 @@
+.slogan_mob {
+  @apply flex justify-end text-right text-12 font-extralight leading-2 
+  tracking-[2.4px] pb-6 md:hidden;
+}
 .slogan {
-  @apply flex justify-end text-right text-12 font-extralight leading-2 tracking-[2.4px] pb-6;
+  @apply hidden md:block md:text-12 md:font-extralight md:leading-2 
+  md:tracking-[2.4px] md:pb-8;
 }
 
 .btn {
-  @apply text-20 font-extralight leading-0.85 uppercase opacity-50;
+  @apply text-20 font-extralight leading-0.85 uppercase opacity-50 
+  transition-all hover:pl-2 focus:pl-2 md:text-22 md:leading-[0.82] md:text-left;
 }
 
 .active_btn {
-  @apply text-20 font-medium leading-0.85 uppercase flex items-center;
+  @apply text-20 font-medium leading-0.85 uppercase flex items-center
+  md:text-22 md:leading-[0.82] md:text-left;
 
   &::before {
     display: block;
@@ -16,7 +23,7 @@
     height: 6px;
     margin-right: 8px;
 
-    background-image: url("../../../public/activeIcon.svg");
+    background-image: url("../../../public/icons/active-icon.svg");
     background-size: cover;
   }
 }

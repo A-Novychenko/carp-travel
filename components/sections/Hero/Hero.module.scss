@@ -1,28 +1,52 @@
 .section_bg {
-  @apply pt-[108px] pb-14;
+  @apply pt-[108px] pb-14 bg-cover md:pt-[122px];
 
   background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
     url("../../../public/bgImg/hero.jpg");
-  background-size: cover;
   background-position-x: 25%;
 }
 
 .location_list {
-  @apply w-[157px] text-10 font-extralight leading-1.6 flex flex-wrap pb-6;
+  @apply w-[157px] text-10 font-extralight leading-1.6 flex flex-wrap pb-6 
+  md:w-[262px] md:text-14 md:leading-[1.14] md:tracking-[1.26px] md:pb-0;
 
   & li {
     @apply relative;
   }
 
   & li:not(:last-child)::after {
+    @apply inline-block absolute top-0 right-1;
     content: "/";
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    right: 4px;
   }
 
   & li:not(:last-child) {
-    padding-right: 8px;
+    @apply pr-2;
   }
+}
+
+.sublabel {
+  @apply text-12 text-right font-light tracking-[9.48px] 
+  md:text-14 md:tracking-[23.5px] md:leading-normal md:text-center;
+}
+
+.descr {
+  @apply text-justify text-14 font-extralight leading-1.43 pb-6 
+  md:text-16 md:leading-[1.25] md:pb-[28px];
+}
+
+.btn {
+  @apply relative block mx-auto text-center font-bold leading-[1] px-16 py-[18px] 
+  bg-bgc-button border-none cursor-pointer transition-all md:mx-0 md:py-[15px] md:leading-normal;
+}
+
+.btn::before {
+  @apply absolute top-0 left-0 content-link-join-l-m md:content-link-join-l-t;
+}
+
+.btn::after {
+  @apply absolute top-0 right-0  content-link-join-r-m md:content-link-join-r-t;
+}
+
+.btn:hover {
+  @apply bg-bgc-button-hover;
 }
