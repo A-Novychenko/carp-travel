@@ -1,5 +1,5 @@
 .section_bg {
-  @apply pt-[108px] pb-14 bg-cover md:pt-[122px];
+  @apply pt-[108px] pb-14 bg-cover md:pt-[122px] lg:pb-20 lg:pt-[98px];
 
   background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
     url("../../../public/bgImg/hero.jpg");
@@ -8,43 +8,48 @@
 
 .location_list {
   @apply w-[157px] text-10 font-extralight leading-1.6 flex flex-wrap pb-6 
-  md:w-[262px] md:text-14 md:leading-[1.14] md:tracking-[1.26px] md:pb-0;
+  md:w-[262px] md:text-14 md:leading-[1.14] md:tracking-[1.26px] md:pb-0
+  lg:w-[608px] lg:text-16 lg:leading-[1.5] lg:tracking-[1.44px];
 
   & li {
-    @apply relative;
+    @apply relative md:pr-1;
   }
 
   & li:not(:last-child)::after {
-    @apply inline-block absolute top-0 right-1;
+    @apply inline-block absolute top-0 right-[2px] md:right-0 lg:right-1;
     content: "/";
   }
 
   & li:not(:last-child) {
-    @apply pr-2;
+    @apply pr-2 lg:pr-4;
   }
 }
 
 .sublabel {
   @apply text-12 text-right font-light tracking-[9.48px] 
-  md:text-14 md:tracking-[23.5px] md:leading-normal md:text-center;
+  md:text-14 md:tracking-[23.5px] md:leading-normal md:text-center
+  lg:text-16 lg:tracking-[36.48px] lg:w-[295px];
 }
 
 .descr {
   @apply text-justify text-14 font-extralight leading-1.43 pb-6 
-  md:text-16 md:leading-[1.25] md:pb-[28px];
+  md:text-16 md:leading-[1.25] md:pb-[28px] lg:text-18 lg:leading-[1.33];
 }
 
 .btn {
   @apply relative block mx-auto text-center font-bold leading-[1] px-16 py-[18px] 
-  bg-bgc-button border-none cursor-pointer transition-all md:mx-0 md:py-[15px] md:leading-normal;
+  bg-bgc-button border-none cursor-pointer transition-all md:mx-0 md:py-[15px] 
+  md:leading-normal lg:text-[32px];
 }
 
 .btn::before {
-  @apply absolute top-0 left-0 content-link-join-l-m md:content-link-join-l-t;
+  @apply absolute top-0 left-0 content-link-join-l-m md:content-link-join-l-t
+  lg:content-link-join-l-d;
 }
 
 .btn::after {
-  @apply absolute top-0 right-0  content-link-join-r-m md:content-link-join-r-t;
+  @apply absolute top-0 right-0  content-link-join-r-m md:content-link-join-r-t
+  lg:content-link-join-r-d;
 }
 
 .btn:hover {

@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import {useForm, SubmitHandler, Controller} from "react-hook-form";
-import {PatternFormat} from "react-number-format";
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
+import { PatternFormat } from 'react-number-format';
 
-import {CheckboxIcon} from "@/components/icons/CheckboxIcon";
-import {IncorrectIcon} from "@/components/icons/IncorrectIcon";
+import { CheckboxIcon } from '@/components/icons/CheckboxIcon';
+import { IncorrectIcon } from '@/components/icons/IncorrectIcon';
 
-import styles from "./ChooseUsForm.module.scss";
+import styles from './ChooseUsForm.module.scss';
 
 export const ChooseUsForm = () => {
   const {
@@ -14,33 +14,33 @@ export const ChooseUsForm = () => {
     handleSubmit,
     watch,
     control,
-    formState: {errors},
+    formState: { errors },
   } = useForm<ChooseUsForm>();
-  const onSubmit: SubmitHandler<ChooseUsForm> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<ChooseUsForm> = data => console.log(data);
 
-  const consentValue = watch("consent");
-  const phoneNumberValue = watch("phoneNumber");
+  const consentValue = watch('consent');
+  const phoneNumberValue = watch('phoneNumber');
 
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-      <div className="md:flex md:gap-5 md:pb-4">
-        <div className="md:w-[222px]">
+      <div className="md:flex md:gap-5 md:pb-4 lg:gap-6 lg:pb-9">
+        <div className="md:w-[222px] lg:w-[290px]">
           <label className={styles.label}>
-            <span className="pb-1">Full name</span>
+            <span className="inline-block pb-1">Full name</span>
             <div className="relative">
               <input
                 className={styles.input}
                 type="text"
                 placeholder="John Smith"
-                style={{color: errors.name ? "#FF5757" : "#FFF"}}
-                {...register("name", {
+                style={{ color: errors.name ? '#FF5757' : '#FFF' }}
+                {...register('name', {
                   required: {
                     value: true,
-                    message: "Name is required",
+                    message: 'Name is required',
                   },
                   pattern: {
                     value: /^[A-Za-z\s]+$/,
-                    message: "Incorrect name",
+                    message: 'Incorrect name',
                   },
                 })}
               />
@@ -54,21 +54,21 @@ export const ChooseUsForm = () => {
           </label>
 
           <label className={styles.label}>
-            <span className="pb-1">E-mail</span>
+            <span className="inline-block pb-1">E-mail</span>
             <div className="relative">
               <input
                 className={styles.input}
                 type="text"
                 placeholder="johnsmith@email.com"
-                style={{color: errors.email ? "#FF5757" : "#FFF"}}
-                {...register("email", {
+                style={{ color: errors.email ? '#FF5757' : '#FFF' }}
+                {...register('email', {
                   required: {
                     value: true,
-                    message: "Email is required",
+                    message: 'Email is required',
                   },
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i,
-                    message: "Incorrect email",
+                    message: 'Incorrect email',
                   },
                 })}
               />
@@ -82,17 +82,17 @@ export const ChooseUsForm = () => {
           </label>
 
           <label className={styles.label}>
-            <span className="pb-1">Position</span>
+            <span className="inline-block pb-1">Position</span>
             <input
               className={styles.input}
               type="text"
               placeholder="Movie maker"
-              {...register("position")}
+              {...register('position')}
             />
           </label>
 
           <label className={styles.label__pb0}>
-            <span className="pb-1">Phone</span>
+            <span className="inline-block pb-1">Phone</span>
             <div className="relative">
               <Controller
                 control={control}
@@ -101,11 +101,11 @@ export const ChooseUsForm = () => {
                   required: true,
                   minLength: 10,
                 }}
-                render={({field: {onChange, value}}) => (
+                render={({ field: { onChange, value } }) => (
                   <div className="relative">
                     <PatternFormat
                       className={styles.input_phone}
-                      style={{color: errors.phoneNumber ? "#FF5757" : "#FFF"}}
+                      style={{ color: errors.phoneNumber ? '#FF5757' : '#FFF' }}
                       format="+38 (###) ## ## ###"
                       onValueChange={(values: any) => {
                         onChange(values.value);
@@ -130,10 +130,11 @@ export const ChooseUsForm = () => {
         </div>
 
         <label className={styles.label__pb0}>
-          <span className="pb-1">Message</span>
+          <span className="inline-block pb-1">Message</span>
           <textarea
-            className={`${styles.input} w-280 h-[196px] resize-none p-2 block md:w-[221px] md:h-[220px]`}
-            {...register("message")}
+            className={`${styles.input} w-280 h-[196px] resize-none p-2 block 
+            md:w-[221px] md:h-[231px] lg:h-[268px]`}
+            {...register('message')}
           />
         </label>
       </div>
@@ -143,7 +144,7 @@ export const ChooseUsForm = () => {
           <label className={styles.label_checkbox}>
             <input
               className={`${styles.checkbox} visually-hidden`}
-              {...register("consent")}
+              {...register('consent')}
               type="checkbox"
               value="confirmed"
             />
@@ -152,15 +153,15 @@ export const ChooseUsForm = () => {
                 <CheckboxIcon opacity={consentValue ? 1 : 0.1} />
               </span>
             </span>
-            <span className="md:w-[192px]">
+            <span className="md:w-[192px] lg:w-[258px]">
               I confirm my consent to the processing of personal data.
             </span>
           </label>
         </div>
 
         <button
-          className={`block ml-auto text-30 font-medium uppercase md:text-center md:leading-none ${
-            !consentValue ? "opacity-20" : "link-transition"
+          className={`block ml-auto text-30 font-medium uppercase md:text-center md:leading-none lg:text-33 ${
+            !consentValue ? 'opacity-20' : 'link-transition'
           }`}
           type="submit"
           disabled={!consentValue}

@@ -4,9 +4,9 @@ export const Hero = () => (
   <section className={styles.section_bg}>
     <div className="ui-container">
       <h1 className="visually-hidden">CarpTravel</h1>
-      <div className="md:flex md:gap-12">
+      <div className="md:flex md:gap-12 lg:p-6 lg:gap-[281px]">
         <div className="hidden md:block">
-          <h2 className="ui-title w-[426px] pb-[68px]">
+          <h2 className="ui-title w-[426px] pb-[68px] lg:w-[646px] lg:pb-[148px]">
             <span className="ui-title-accent block">Uncover&nbsp;</span>
             Carpathian&rsquo;s Secrets
           </h2>
@@ -34,11 +34,11 @@ export const Hero = () => (
         </div>
 
         <div className="md:flex md:flex-col">
-          <div className="flex justify-end pb-6 md:pb-14">
+          <div className="flex justify-end pb-6 md:pb-14 lg:pb-[181px]">
             <div className="flex flex-col items-center justify-center">
-              <p className="text-37 leading-0.7 md:text-67 md:leading-normal">
+              <p className="text-37 leading-0.7 md:text-67 md:leading-normal lg:text-98">
                 <span className="font-medium">7</span>
-                <span className="font-thin tracking-[1.665px] md:tracking-[6.71px]">
+                <span className="font-thin tracking-[1.665px] md:tracking-[6.71px] lg:tracking-normal">
                   DAYS
                 </span>
               </p>

@@ -9,21 +9,22 @@
 
 .btn {
   @apply text-20 font-extralight leading-0.85 uppercase opacity-50 
-  transition-all hover:pl-2 focus:pl-2 md:text-22 md:leading-[0.82] md:text-left;
+  transition-all hover:pl-2 focus:pl-2 md:text-22 md:leading-[0.82] md:text-left
+  lg:text-[28px] lg:leading-[0.86];
 }
 
 .active_btn {
   @apply text-20 font-medium leading-0.85 uppercase flex items-center
-  md:text-22 md:leading-[0.82] md:text-left;
+  md:text-22 md:leading-[0.82] md:text-left lg:text-[28px] lg:leading-[0.86];
 
   &::before {
     display: block;
-    content: "";
+    content: '';
     width: 6px;
     height: 6px;
     margin-right: 8px;
 
-    background-image: url("../../../public/icons/active-icon.svg");
+    background-image: url('../../../public/icons/active-icon.svg');
     background-size: cover;
   }
 }

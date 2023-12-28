@@ -6,7 +6,7 @@
     top: 0;
     left: 0;
 
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
 
@@ -14,7 +14,7 @@
         rgba(2, 15, 8, 0.75),
         rgba(2, 15, 8, 0.75)
       ),
-      url("../../../public/bgImg/contacts.jpg");
+      url('../../../public/bgImg/contacts.jpg');
     background-size: cover;
     background-position: 30%;
 
@@ -23,19 +23,21 @@
 }
 
 .wrap {
-  @apply flex text-right text-14 leading-[1.71] gap-5 justify-end items-baseline pb-6 
-  md:gap-6 md:text-16 md:leading-[1.5] md:last:pb-0;
+  @apply flex text-right text-14 leading-[1.71] gap-5 justify-end 
+  items-baseline pb-6 md:gap-6 md:text-16 md:leading-[1.5] 
+  md:last:pb-0 lg:text-18 lg:leading-[1.33] lg:pb-16 lg:last:pb-0;
 }
 
 .contact_type {
-  @apply text-12 font-extralight leading-[1.67] w-[81px] text-left;
+  @apply text-12 font-extralight leading-[1.67] w-[81px] text-left 
+  lg:leading-2 lg:w-[293px];
 }
 
 .follow_use_wrap {
-  @apply flex flex-row-reverse text-14 leading-[1.71] gap-5 justify-start items-baseline pb-3
-  md:pb-0;
+  @apply flex flex-row-reverse text-14 leading-[1.71] gap-5 justify-start 
+  items-baseline pb-3 md:pb-0 lg:flex-row lg:text-right lg:text-18 lg:leading-[1.33];
 }
 
 .follow_use {
-  @apply text-12 font-extralight leading-[1.67];
+  @apply text-12 font-extralight leading-[1.67] lg:w-[293px] lg:text-left;
 }

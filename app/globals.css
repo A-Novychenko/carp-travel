@@ -15,18 +15,21 @@ body {
 }
 
 .ui-container {
-  @apply container xs:w-full xs:max-w-full sm:mx-auto sm:w-mob sm:max-w-full md:w-tab lg:w-desc;
+  @apply container xs:w-full xs:max-w-full sm:mx-auto sm:w-mob sm:max-w-full 
+  md:w-tab lg:w-desc;
 }
 
 @layer components {
   .ui-section {
-    @apply py-14 md:py-16;
+    @apply py-14 md:py-16 lg:py-20;
   }
 }
 
 @layer components {
   .ui-title {
-    @apply text-40 font-thin leading-1.4 tracking-[-1.6px] uppercase pb-6 md:text-67 md:leading-normal md:tracking-[-2.68px];
+    @apply text-40 font-thin leading-1.4 tracking-[-1.6px] uppercase pb-6 
+    md:text-67 md:leading-normal md:tracking-[-2.68px]
+    lg:text-98 lg:tracking-[-3.92px];
   }
 }
 

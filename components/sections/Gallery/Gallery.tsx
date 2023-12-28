@@ -1,28 +1,31 @@
-import {GallerySlider} from "@/components/elements/GallerySlider/GallerySlider";
+import Image from 'next/image';
 
-import {galleryData} from "@/data/galleryData";
+import { GallerySlider } from '@/components/elements/GallerySlider/GallerySlider';
 
-import styles from "./Gallery.module.scss";
-import Image from "next/image";
+import { galleryData } from '@/data/galleryData';
+
+import styles from './Gallery.module.scss';
 
 export const Gallery = () => (
-  <section id="gallery" className={`${"ui-section"} ${styles.section_bg}`}>
+  <section id="gallery" className={`${'ui-section'} ${styles.section_bg}`}>
     <div className="ui-container">
-      <h2 className="ui-title pb-[72px] text-center">
-        OUR <span className="ui-title-accent">GALLERY</span>
-      </h2>
+      <div className="lg:py-6">
+        <h2 className="ui-title md:pb-[72px] md:text-center lg:pb-6 lg:text-left">
+          OUR <span className="ui-title-accent">GALLERY</span>
+        </h2>
 
-      <ul className="block md:hidden">
-        {galleryData &&
-          galleryData.map(({path, title}, idx) => (
-            <li key={idx} className="pb-6 last:pb-0">
-              <Image src={path} alt={title} width={280} height={187}></Image>
-            </li>
-          ))}
-      </ul>
+        <ul className="block md:hidden">
+          {galleryData &&
+            galleryData.map(({ path, title }, idx) => (
+              <li key={idx} className="pb-6 last:pb-0">
+                <Image src={path} alt={title} width={280} height={187}></Image>
+              </li>
+            ))}
+        </ul>
 
-      <div className="hidden md:block">
-        <GallerySlider />
+        <div className="hidden md:block">
+          <GallerySlider />
+        </div>
       </div>
     </div>
   </section>

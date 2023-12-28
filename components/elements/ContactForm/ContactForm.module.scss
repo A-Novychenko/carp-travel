@@ -1,19 +1,21 @@
 .label {
-  @apply block text-12 font-extralight leading-2 tracking-[2.4px] pb-6;
+  @apply block text-12 font-extralight leading-2 tracking-[2.4px] pb-6 lg:pb-0;
 }
+
 .label_msg {
-  @apply block text-12 font-extralight leading-2 tracking-[2.4px] pb-4;
+  @apply block text-12 font-extralight leading-2 tracking-[2.4px] pb-4 lg:pb-6;
 }
 
 .input {
   @apply text-justify text-13 font-extralight leading-[1.85] w-full px-2
-   bg-bgc-input placeholder:opacity-20 md:w-[221px];
+   bg-bgc-input placeholder:opacity-20 md:w-[221px] lg:w-[293px] 
+   lg:text-20 lg:leading-[1.2] lg:py-[2px];
 }
 
 .textarea {
   @apply text-justify text-13 font-extralight leading-[1.85] w-full px-2
    bg-bgc-input placeholder:opacity-20 h-[196px] resize-none p-2 
-   block md:w-[463px] md:h-[221px];
+   block md:w-[463px] md:h-[221px] lg:w-full lg:h-[174px];
 }
 
 .error {
@@ -22,5 +24,6 @@
 }
 
 .send_btn {
-  @apply block ml-auto text-30 font-medium uppercase link-transition md:leading-normal;
+  @apply block ml-auto text-30 font-medium uppercase link-transition 
+  md:leading-normal lg:text-33;
 }

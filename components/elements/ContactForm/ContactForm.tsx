@@ -1,39 +1,39 @@
-"use client";
+'use client';
 
-import {useForm, SubmitHandler} from "react-hook-form";
+import { useForm, SubmitHandler } from 'react-hook-form';
 
-import {IncorrectIcon} from "@/components/icons/IncorrectIcon";
+import { IncorrectIcon } from '@/components/icons/IncorrectIcon';
 
-import styles from "./ContactForm.module.scss";
+import styles from './ContactForm.module.scss';
 
 export const ContactForm = () => {
   const {
     register,
     handleSubmit,
-    formState: {errors},
+    formState: { errors },
   } = useForm<ChooseUsForm>();
-  const onSubmit: SubmitHandler<ChooseUsForm> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<ChooseUsForm> = data => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="flex flex-col md:flex-row md:gap-x-5">
-        <div>
+    <form onSubmit={handleSubmit(onSubmit)} className="lg:w-[606px]">
+      <div className="flex flex-col md:flex-row md:gap-x-5 lg:flex-col">
+        <div className="lg:flex lg:justify-between lg:pb-10">
           <label className={styles.label}>
-            <span className="pb-1">Full name</span>
+            <span className="inline-block pb-1">Full name</span>
             <div className="relative">
               <input
                 className={styles.input}
                 type="text"
                 placeholder="John Smith"
-                style={{color: errors.name ? "#FF5757" : "#FFF"}}
-                {...register("name", {
+                style={{ color: errors.name ? '#FF5757' : '#FFF' }}
+                {...register('name', {
                   required: {
                     value: true,
-                    message: "Name is required",
+                    message: 'Name is required',
                   },
                   pattern: {
                     value: /^[A-Za-z\s]+$/,
-                    message: "Incorrect name",
+                    message: 'Incorrect name',
                   },
                 })}
               />
@@ -47,21 +47,21 @@ export const ContactForm = () => {
           </label>
 
           <label className={styles.label}>
-            <span className="pb-1">E-mail</span>
+            <span className="inline-block pb-1">E-mail</span>
             <div className="relative">
               <input
                 className={styles.input}
                 type="text"
                 placeholder="johnsmith@email.com"
-                style={{color: errors.email ? "#FF5757" : "#FFF"}}
-                {...register("email", {
+                style={{ color: errors.email ? '#FF5757' : '#FFF' }}
+                {...register('email', {
                   required: {
                     value: true,
-                    message: "Email is required",
+                    message: 'Email is required',
                   },
                   pattern: {
                     value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/i,
-                    message: "Incorrect email",
+                    message: 'Incorrect email',
                   },
                 })}
               />
@@ -76,8 +76,8 @@ export const ContactForm = () => {
         </div>
 
         <label className={styles.label_msg}>
-          <span className="pb-1">Message</span>
-          <textarea className={styles.textarea} {...register("message")} />
+          <span className="inline-block pb-1">Message</span>
+          <textarea className={styles.textarea} {...register('message')} />
         </label>
       </div>
 

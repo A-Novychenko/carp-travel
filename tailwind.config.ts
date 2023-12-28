@@ -23,7 +23,7 @@ const config: Config = {
         xs: "20px",
         sm: "20px",
         md: "32px",
-        lg: "104px",
+        lg: "80px",
       },
     },
     colors: {
@@ -55,6 +55,7 @@ const config: Config = {
       "40": "40px",
       "43": "43px",
       "67": "67px",
+      "98": "98px",
     },
     extend: {
       backgroundImage: {
