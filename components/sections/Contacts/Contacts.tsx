@@ -1,13 +1,20 @@
-import { ContactForm } from '@/components/elements/ContactForm/ContactForm';
 import Link from 'next/link';
+
+import { ContactForm } from '@/components/elements/ContactForm/ContactForm';
 
 import styles from './Contacts.module.scss';
 
 export const Contacts = () => (
-  <section id="contacts" className={`${'ui-section'} ${styles.section_bg}`}>
+  <section
+    id="contacts"
+    className={`${'ui-section'} ${styles.section_bg}`}
+    role="region"
+    aria-label="Contact Section"
+    aria-labelledby="contacts-heading"
+  >
     <div className="ui-container">
       <div className="lg:p-6">
-        <h2 className="ui-title md:pb-9 lg:pb-[72px]">
+        <h2 id="contacts-heading" className="ui-title md:pb-9 lg:pb-[72px]">
           CONTACT <span className="ui-title-accent">US</span>
         </h2>
 
@@ -15,7 +22,7 @@ export const Contacts = () => (
           <div className="md:flex md:pb-16 lg:w-[606px] lg:flex-col lg:pb-0">
             <div className="md:mr-[90px] md:ml-[34px] lg:m-0 lg:pb-[121px]">
               <div className={styles.wrap}>
-                <ul>
+                <ul role="list" aria-label="Phone numbers">
                   <li>
                     <Link href="tel:+380981234567" className="link-transition">
                       +38 (098) 12 34 567
@@ -43,11 +50,16 @@ export const Contacts = () => (
             </div>
 
             <div className={styles.follow_use_wrap}>
-              <ul className="w-[81px] lg:w-[293px]">
+              <ul
+                className="w-[81px] lg:w-[293px]"
+                role="list"
+                aria-label="Social media links"
+              >
                 <li>
                   <Link
                     href="https://www.facebook.com"
                     className="link-transition"
+                    target="_blank"
                   >
                     facebook
                   </Link>
@@ -56,6 +68,7 @@ export const Contacts = () => (
                   <Link
                     href="https://www.instagram.com"
                     className="link-transition"
+                    target="_blank"
                   >
                     instagram
                   </Link>
@@ -64,6 +77,7 @@ export const Contacts = () => (
                   <Link
                     href="https://www.youtube.com"
                     className="link-transition"
+                    target="_blank"
                   >
                     youtube
                   </Link>
@@ -72,6 +86,7 @@ export const Contacts = () => (
                   <Link
                     href="https://www.tiktok.com/"
                     className="link-transition"
+                    target="_blank"
                   >
                     tiktok
                   </Link>

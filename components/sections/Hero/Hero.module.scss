@@ -2,7 +2,7 @@
   @apply pt-[108px] pb-14 bg-cover md:pt-[122px] lg:pb-20 lg:pt-[98px];
 
   background-image: linear-gradient(180deg, #001826 0%, rgba(0, 37, 49, 0) 100%),
-    url("../../../public/bgImg/hero.jpg");
+    url('../../../public/bgImg/hero.jpg');
   background-position-x: 25%;
 }
 
@@ -17,7 +17,7 @@
 
   & li:not(:last-child)::after {
     @apply inline-block absolute top-0 right-[2px] md:right-0 lg:right-1;
-    content: "/";
+    content: '/';
   }
 
   & li:not(:last-child) {
@@ -34,24 +34,4 @@
 .descr {
   @apply text-justify text-14 font-extralight leading-1.43 pb-6 
   md:text-16 md:leading-[1.25] md:pb-[28px] lg:text-18 lg:leading-[1.33];
-}
-
-.btn {
-  @apply relative block mx-auto text-center font-bold leading-[1] px-16 py-[18px] 
-  bg-bgc-button border-none cursor-pointer transition-all md:mx-0 md:py-[15px] 
-  md:leading-normal lg:text-[32px];
-}
-
-.btn::before {
-  @apply absolute top-0 left-0 content-link-join-l-m md:content-link-join-l-t
-  lg:content-link-join-l-d;
-}
-
-.btn::after {
-  @apply absolute top-0 right-0  content-link-join-r-m md:content-link-join-r-t
-  lg:content-link-join-r-d;
-}
-
-.btn:hover {
-  @apply bg-bgc-button-hover;
 }

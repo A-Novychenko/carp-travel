@@ -1,0 +1,19 @@
+.btn {
+  @apply relative block mx-auto text-center font-bold leading-[1] px-16 py-[18px] 
+  bg-bgc-button border-none cursor-pointer transition-all md:mx-0 md:py-[15px] 
+  md:leading-normal lg:text-[32px];
+}
+
+.btn::before {
+  @apply absolute top-0 left-0 content-link-join-l-m md:content-link-join-l-t
+  lg:content-link-join-l-d;
+}
+
+.btn::after {
+  @apply absolute top-0 right-0  content-link-join-r-m md:content-link-join-r-t
+  lg:content-link-join-r-d;
+}
+
+.btn:hover {
+  @apply bg-bgc-button-hover;
+}

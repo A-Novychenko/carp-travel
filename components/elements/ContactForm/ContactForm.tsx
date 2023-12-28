@@ -11,17 +11,27 @@ export const ContactForm = () => {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<ChooseUsForm>();
-  const onSubmit: SubmitHandler<ChooseUsForm> = data => console.log(data);
+  } = useForm<ContactFormInputs>();
+  const onSubmit: SubmitHandler<ContactFormInputs> = data => console.log(data);
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className="lg:w-[606px]">
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className="lg:w-[606px]"
+      aria-label="contact-form"
+      role="form"
+    >
       <div className="flex flex-col md:flex-row md:gap-x-5 lg:flex-col">
         <div className="lg:flex lg:justify-between lg:pb-10">
           <label className={styles.label}>
             <span className="inline-block pb-1">Full name</span>
             <div className="relative">
               <input
+                aria-required="true"
+                aria-invalid={errors.name ? 'true' : 'false'}
+                aria-describedby={
+                  errors.name ? 'nameContactFormError' : undefined
+                }
                 className={styles.input}
                 type="text"
                 placeholder="John Smith"
@@ -38,9 +48,15 @@ export const ContactForm = () => {
                 })}
               />
               {errors.name && (
-                <div className={styles.error}>
+                <div
+                  className={styles.error}
+                  role="alert"
+                  id="nameContactFormError"
+                >
                   <IncorrectIcon />
-                  <span>{errors.name.message}</span>
+                  <span id="nameContactFormErrorMessage">
+                    {errors.name.message}
+                  </span>
                 </div>
               )}
             </div>
@@ -50,6 +66,11 @@ export const ContactForm = () => {
             <span className="inline-block pb-1">E-mail</span>
             <div className="relative">
               <input
+                aria-required="true"
+                aria-invalid={errors.email ? 'true' : 'false'}
+                aria-describedby={
+                  errors.email ? 'emailContactFormError' : undefined
+                }
                 className={styles.input}
                 type="text"
                 placeholder="johnsmith@email.com"
@@ -66,9 +87,15 @@ export const ContactForm = () => {
                 })}
               />
               {errors.email && (
-                <div className={styles.error}>
+                <div
+                  className={styles.error}
+                  role="alert"
+                  id="emailContactFormError"
+                >
                   <IncorrectIcon />
-                  <span>{errors.email.message}</span>
+                  <span id="emailContactFormErrorMessage">
+                    {errors.email.message}
+                  </span>
                 </div>
               )}
             </div>
@@ -81,7 +108,11 @@ export const ContactForm = () => {
         </label>
       </div>
 
-      <button className={styles.send_btn} type="submit">
+      <button
+        className={styles.send_btn}
+        type="submit"
+        aria-label="Submit form"
+      >
         Send
       </button>
     </form>

@@ -25,7 +25,7 @@ export const Services = () => {
   };
 
   return (
-    <section id="services" className="ui-section py-0">
+    <section id="services" className="ui-section py-0" role="region">
       <Swiper
         modules={[EffectFade, A11y]}
         slidesPerView={1}
@@ -44,6 +44,9 @@ export const Services = () => {
                 <SwiperSlide key={idx}>
                   <div
                     className="w-full h-full bg-cover bg-bottom -z-10"
+                    role="group"
+                    aria-roledescription="slide"
+                    aria-label={`Slide ${idx + 1} of ${servicesData.length}`}
                     style={{
                       backgroundImage: `linear-gradient( rgba(2, 15, 8, 0.50) 0%,
                      rgba(2, 15, 8, 0.50) 100%), url(${bgImg})`,
@@ -74,14 +77,14 @@ export const Services = () => {
 
                           <div className="md:flex md:gap-5 md:items-center lg:items-stretch">
                             <div
-                              className="w-280 h-[200px] pb-4 mx-auto sm:w-[440px] sm:h-[380px]
-                         md:w-[464px] md:h-[404px] md:pb-0 lg:w-[606px] lg:h-[432px] lg:m-0"
+                              className="w-280 h-[213px] pb-4 mx-auto sm:w-[440px] sm:h-[380px]
+                               md:w-[464px] md:h-[404px] md:pb-0 lg:w-[606px] lg:h-[432px] lg:m-0"
                             >
                               <Image
                                 src={img}
                                 alt={title}
                                 width={280}
-                                height={200}
+                                height={197}
                                 className="block w-full h-full object-cover"
                               />
                             </div>

@@ -1,36 +1,40 @@
-"use client";
+'use client';
 
-import {useState} from "react";
+import { useState } from 'react';
 
-import {Navlinks} from "../NavLinks/Navlinks";
+import { Navlinks } from '../NavLinks/Navlinks';
 
-import styles from "./MobileMenu.module.scss";
+import styles from './MobileMenu.module.scss';
 
 export const MobileMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleCloseMenu = () => {
     setIsOpen(false);
-    document.body.classList.toggle("modal-open", false);
+    document.body.classList.toggle('modal-open', false);
   };
 
   const handleCloseMenuOnBackdrop = (e: React.MouseEvent) => {
     if (e.currentTarget === e.target) {
       setIsOpen(false);
-      document.body.classList.toggle("modal-open", false);
+      document.body.classList.toggle('modal-open', false);
     }
     return;
   };
 
   const handleOpenMenu = () => {
     setIsOpen(true);
-    document.body.classList.toggle("modal-open", true);
+    document.body.classList.toggle('modal-open', true);
   };
 
   return (
     <>
       {!isOpen ? (
-        <button className={styles.menu_btn} onClick={handleOpenMenu}>
+        <button
+          className={styles.menu_btn}
+          onClick={handleOpenMenu}
+          aria-expanded={isOpen}
+        >
           Menu
         </button>
       ) : (

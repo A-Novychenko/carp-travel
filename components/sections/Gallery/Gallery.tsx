@@ -7,18 +7,34 @@ import { galleryData } from '@/data/galleryData';
 import styles from './Gallery.module.scss';
 
 export const Gallery = () => (
-  <section id="gallery" className={`${'ui-section'} ${styles.section_bg}`}>
+  <section
+    id="gallery"
+    className={`${'ui-section'} ${styles.section_bg}`}
+    role="region"
+    aria-label="Gallery Section"
+    aria-labelledby="gallery-heading"
+  >
     <div className="ui-container">
       <div className="lg:py-6">
-        <h2 className="ui-title md:pb-[72px] md:text-center lg:pb-6 lg:text-left">
+        <h2
+          className="ui-title md:pb-[72px] md:text-center lg:pb-6 lg:text-left"
+          id="gallery-heading"
+        >
           OUR <span className="ui-title-accent">GALLERY</span>
         </h2>
 
-        <ul className="block md:hidden">
+        <ul className="block md:hidden" role="list" aria-label="Gallery Images">
           {galleryData &&
             galleryData.map(({ path, title }, idx) => (
               <li key={idx} className="pb-6 last:pb-0">
-                <Image src={path} alt={title} width={280} height={187}></Image>
+                <div className="w-280 h-[170px] overflow-hidden">
+                  <Image
+                    src={path}
+                    alt={title}
+                    width={280}
+                    className="block w-full h-auto object-cover"
+                  />
+                </div>
               </li>
             ))}
         </ul>

@@ -1,18 +1,26 @@
 import { ChooseUsForm } from '@/components/elements/ChooseUsForm/ChooseUsForm';
+
 import whyUseData from '@/data/whyUsData.json';
 
 import styles from './Career.module.scss';
 
 export const Career = () => (
-  <section id="career">
+  <section
+    id="career"
+    role="region"
+    aria-label="Career Section"
+    aria-labelledby="career-heading"
+    aria-describedby="career-description"
+  >
     <div className={`${'ui-section'} ${styles.section_bg}`}>
       <div className="ui-container">
         <div className="lg:p-6">
           <div className="md:flex md:pb-[5px] lg:pb-6 lg:items-center">
-            <h2 className="ui-title md:pb-[7px] lg:pb-0">
+            <h2 className="ui-title md:pb-[7px] lg:pb-0" id="career-heading">
               CHOOSE <span className="ui-title-accent">US</span>
             </h2>
             <p
+              id="career-description"
               className="w-180 text-14 font-extralight leading-1.43 ml-auto pb-9 
             md:pb-0 md:w-[221px] md:text-justify md:text-13 md:leading-[1.54]
             lg:w-[293px] lg:text-18 lg:leading-[1.33]"
@@ -35,14 +43,21 @@ export const Career = () => (
                 <ul className="w-180 md:w-[221px] lg:w-full">
                   {whyUseData &&
                     whyUseData.map(({ advantages, description }, idx) => (
-                      <li key={idx} className={styles.advantages_item}>
+                      <li
+                        key={idx}
+                        className={styles.advantages_item}
+                        aria-labelledby={`advantage-heading-${idx}`}
+                        aria-describedby={`advantage-description-${idx}`}
+                      >
                         <p
+                          id={`advantage-heading-${idx}`}
                           className="text-right text-14 font-normal leading-1.43 pb-2 
                     md:text-16 md:leading-1.25 lg:ml-auto lg:text-18 lg:leading-[1.33]"
                         >
                           {advantages}
                         </p>
                         <p
+                          id={`advantage-description-${idx}`}
                           className="text-right text-12 font-extralight leading-1.6 pb-4 md:pb-6 
                         lg:w-[290px] lg:ml-6 lg:text-left lg:leading-2"
                         >
