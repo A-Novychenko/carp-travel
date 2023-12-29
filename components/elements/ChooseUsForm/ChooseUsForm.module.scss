@@ -1,11 +1,11 @@
 .label {
-  @apply block text-12 font-extralight leading-2 tracking-[2.4px] pb-4 
-  md:w-[222px] lg:w-[290px] lg:pb-6;
+  @apply block text-12 font-extralight leading-2 tracking-[2.4px] mb-4 
+  md:w-[222px] lg:w-[290px] lg:mb-6;
 }
 
-.label__pb0 {
-  @apply block text-12 font-extralight leading-2 tracking-[2.4px] pb-4 
-  md:w-[222px] md:pb-0 lg:w-[290px];
+.label__mb0 {
+  @apply block text-12 font-extralight leading-2 tracking-[2.4px] 
+  md:w-[222px]  lg:w-[290px];
 }
 
 .label_checkbox {

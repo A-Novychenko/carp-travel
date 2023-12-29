@@ -7,8 +7,8 @@
 }
 
 .location_list {
-  @apply w-[157px] text-10 font-extralight leading-1.6 flex flex-wrap pb-6 
-  md:w-[262px] md:text-14 md:leading-[1.14] md:tracking-[1.26px] md:pb-0
+  @apply w-[157px] text-10 font-extralight leading-1.6 flex flex-wrap mb-6 
+  md:w-[262px] md:text-14 md:leading-[1.14] md:tracking-[1.26px] md:mb-0
   lg:w-[608px] lg:text-16 lg:leading-[1.5] lg:tracking-[1.44px];
 
   & li {
@@ -32,6 +32,6 @@
 }
 
 .descr {
-  @apply text-justify text-14 font-extralight leading-1.43 pb-6 
-  md:text-16 md:leading-[1.25] md:pb-[28px] lg:text-18 lg:leading-[1.33];
+  @apply text-justify text-14 font-extralight leading-1.43 mb-6 
+  md:text-16 md:leading-[1.25] md:mb-[28px] lg:text-18 lg:leading-[1.33];
 }

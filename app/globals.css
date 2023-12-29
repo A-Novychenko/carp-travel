@@ -1,4 +1,4 @@
-@import "node_modules/modern-normalize/modern-normalize.css";
+@import 'node_modules/modern-normalize/modern-normalize.css';
 
 @tailwind base;
 @tailwind components;
@@ -27,8 +27,8 @@ body {
 
 @layer components {
   .ui-title {
-    @apply text-40 font-thin leading-1.4 tracking-[-1.6px] uppercase pb-6 
-    md:text-67 md:leading-normal md:tracking-[-2.68px]
+    @apply text-40 font-thin leading-1.4 tracking-[-1.6px] uppercase mb-8 
+    md:mb-0 md:text-67 md:leading-normal md:tracking-[-2.68px]
     lg:text-98 lg:tracking-[-3.92px];
   }
 }

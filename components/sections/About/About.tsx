@@ -4,9 +4,9 @@ export const About = () => (
   <section id="about" className={`${'ui-section'} ${styles.section_bg}`}>
     <div className="ui-container">
       <div className="lg:p-6">
-        <div className="md:flex md:justify-between md:pb-16 lg:gap-x-6 lg:pb-0">
+        <div className="md:flex md:justify-between md:mb-16 lg:gap-x-6 lg:mb-0">
           <div className="md:flex md:flex-col md:justify-between lg:w-[606px]">
-            <h2 id="about-heading" className="ui-title pb-2">
+            <h2 id="about-heading" className="ui-title">
               WHO <span className="ui-title-accent">WE ARE</span>
             </h2>
             <div className="hidden md:block md:w-[221px] md:text-16 md:leading-1.25 lg:hidden">
@@ -53,8 +53,8 @@ export const About = () => (
             </ul>
 
             <div
-              className="w-180 ml-auto text-14 font-normal leading-1.43 pb-10 md:hidden 
-            lg:block lg:w-[296px] lg:ml-auto lg:pb-0 lg:leading-[1.34] lg:text-18"
+              className="w-180 ml-auto text-14 font-normal leading-1.43 mb-10 md:hidden 
+            lg:block lg:w-[296px] lg:ml-auto lg:mb-0 lg:leading-[1.34] lg:text-18"
             >
               <p className="uppercase">
                 <span className="block">From vacationers</span>

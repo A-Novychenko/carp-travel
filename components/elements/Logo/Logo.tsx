@@ -4,7 +4,7 @@ import logoImg from '@/public/logo.png';
 import Link from 'next/link';
 
 export const Logo = () => (
-  <Link href="/" className="cursor-pointer">
+  <Link href="/" className="cursor-pointer" aria-label="Link to homepage">
     <div className="w-[61px] h-[34px]">
       <Image
         src={logoImg}

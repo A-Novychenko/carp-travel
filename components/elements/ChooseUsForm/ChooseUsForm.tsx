@@ -28,10 +28,10 @@ export const ChooseUsForm = () => {
 
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
-      <div className="md:flex md:gap-5 md:pb-4 lg:gap-6 lg:pb-9">
-        <div className="md:w-[222px] lg:w-[290px]">
+      <div className="md:flex md:gap-5 mb-4 lg:gap-6 lg:mb-9">
+        <div className="md:w-[222px] lg:w-[290px] mb-4 md:mb-0">
           <label className={styles.label}>
-            <span className="inline-block pb-1">Full name</span>
+            <span className="inline-block mb-1">Full name</span>
             <span className="relative block">
               <input
                 aria-required="true"
@@ -62,7 +62,7 @@ export const ChooseUsForm = () => {
           </label>
 
           <label className={styles.label}>
-            <span className="inline-block pb-1">E-mail</span>
+            <span className="inline-block mb-1">E-mail</span>
             <span className="relative block">
               <input
                 aria-required="true"
@@ -93,7 +93,7 @@ export const ChooseUsForm = () => {
           </label>
 
           <label className={styles.label}>
-            <span className="inline-block pb-1">Position</span>
+            <span className="inline-block mb-1">Position</span>
             <input
               className={styles.input}
               type="text"
@@ -102,8 +102,8 @@ export const ChooseUsForm = () => {
             />
           </label>
 
-          <label className={styles.label__pb0}>
-            <span className="inline-block pb-1">Phone</span>
+          <label className={styles.label__mb0}>
+            <span className="inline-block mb-1">Phone</span>
             <span className="relative block">
               <Controller
                 control={control}
@@ -149,8 +149,8 @@ export const ChooseUsForm = () => {
           </label>
         </div>
 
-        <label className={styles.label__pb0}>
-          <span className="inline-block pb-1">Message</span>
+        <label className={styles.label__mb0}>
+          <span className="inline-block mb-1">Message</span>
           <textarea
             className={`${styles.input} w-280 h-[196px] resize-none p-2 block 
             md:w-[221px] md:h-[231px] lg:h-[268px]`}
@@ -160,7 +160,7 @@ export const ChooseUsForm = () => {
       </div>
 
       <div className="md:flex md:justify-between md:items-start">
-        <div className="pb-4 md:pb-0">
+        <div className="mb-4 md:mb-0">
           <label className={styles.label_checkbox}>
             <input
               aria-invalid={!consentValue ? 'true' : 'false'}

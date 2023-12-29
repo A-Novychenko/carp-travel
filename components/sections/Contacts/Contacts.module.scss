@@ -24,8 +24,8 @@
 
 .wrap {
   @apply flex text-right text-14 leading-[1.71] gap-5 justify-end 
-  items-baseline pb-6 md:gap-6 md:text-16 md:leading-[1.5] 
-  md:last:pb-0 lg:text-18 lg:leading-[1.33] lg:pb-16 lg:last:pb-0;
+  items-baseline mb-6 md:gap-6 md:text-16 md:leading-[1.5] 
+  md:last:mb-0 lg:text-18 lg:leading-[1.33] lg:mb-16 lg:last:mb-0;
 }
 
 .contact_type {
@@ -35,7 +35,7 @@
 
 .follow_use_wrap {
   @apply flex flex-row-reverse text-14 leading-[1.71] gap-5 justify-start 
-  items-baseline pb-3 md:pb-0 lg:flex-row lg:text-right lg:text-18 lg:leading-[1.33];
+  items-baseline mb-3 md:mb-0 lg:flex-row lg:text-right lg:text-18 lg:leading-[1.33];
 }
 
 .follow_use {

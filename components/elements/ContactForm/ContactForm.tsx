@@ -29,9 +29,9 @@ export const ContactForm = () => {
       id="contact-form"
     >
       <div className="flex flex-col md:flex-row md:gap-x-5 lg:flex-col">
-        <div className="lg:flex lg:justify-between lg:pb-10">
+        <div className="lg:flex lg:justify-between lg:mb-10">
           <label className={styles.label}>
-            <span className="inline-block pb-1">Full name</span>
+            <span className="inline-block mb-1">Full name</span>
             <span className="relative block">
               <input
                 aria-required="true"
@@ -70,7 +70,7 @@ export const ContactForm = () => {
           </label>
 
           <label className={styles.label}>
-            <span className="inline-block pb-1">E-mail</span>
+            <span className="inline-block mb-1">E-mail</span>
             <span className="relative block">
               <input
                 aria-required="true"
@@ -110,7 +110,7 @@ export const ContactForm = () => {
         </div>
 
         <label className={styles.label_msg}>
-          <span className="inline-block pb-1">Message</span>
+          <span className="inline-block mb-1">Message</span>
           <textarea className={styles.textarea} {...register('message')} />
         </label>
       </div>

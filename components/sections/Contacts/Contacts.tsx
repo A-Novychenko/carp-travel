@@ -8,13 +8,13 @@ export const Contacts = () => (
   <section id="contacts" className={`${'ui-section'} ${styles.section_bg}`}>
     <div className="ui-container">
       <div className="lg:p-6">
-        <h2 className="ui-title md:pb-9 lg:pb-[72px]">
+        <h2 className="ui-title md:mb-9 lg:mb-[72px]">
           CONTACT <span className="ui-title-accent">US</span>
         </h2>
 
         <div className="lg:flex lg:gap-x-5">
-          <div className="md:flex md:pb-16 lg:w-[606px] lg:flex-col lg:pb-0">
-            <div className="md:mr-[90px] md:ml-[34px] lg:m-0 lg:pb-[121px]">
+          <div className="md:flex md:mb-16 lg:w-[606px] lg:flex-col lg:mb-0">
+            <div className="md:mr-[90px] md:ml-[34px] lg:m-0 lg:mb-[121px]">
               <div className={styles.wrap}>
                 <ul aria-label="Phone numbers">
                   <li>

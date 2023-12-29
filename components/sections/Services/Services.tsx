@@ -56,13 +56,13 @@ export const Services = () => {
                     <div className="ui-container">
                       <div className="py-14 md:py-16 lg:py-20">
                         <div className="lg:p-6">
-                          <div className="md:flex md:pb-9 lg:pb-5">
-                            <h2 className="ui-title md:mr-[170px] md:pb-0">
+                          <div className="md:flex md:mb-9 lg:mb-5">
+                            <h2 className="ui-title md:mr-[170px]">
                               WE <span className="ui-title-accent">OFFER</span>
                             </h2>
                             <p
-                              className="text-43 font-thin text-right pb-5 md:text-justify
-                         md:text-67 md:leading-[1.16] md:pb-0 lg:text-98 lg:leading-normal"
+                              className="text-43 font-thin text-right mb-5 md:text-justify
+                         md:text-67 md:leading-[1.16] md:mb-0 lg:text-98 lg:leading-normal"
                             >
                               {`0${activeSlide + 1}/`}
                               <span className="text-count-slide-dark text-left">
@@ -77,8 +77,8 @@ export const Services = () => {
 
                           <div className="md:flex md:gap-5 md:items-center lg:items-stretch">
                             <div
-                              className="w-280 h-[213px] pb-4 mx-auto sm:w-[440px] sm:h-[380px]
-                               md:w-[464px] md:h-[404px] md:pb-0 lg:w-[606px] lg:h-[432px] lg:m-0"
+                              className="w-280 h-[197px] mb-4 mx-auto sm:w-[440px] sm:h-[380px]
+                               md:w-[464px] md:h-[404px] md:mb-0 lg:w-[606px] lg:h-[432px] lg:m-0"
                             >
                               <Image
                                 src={img}
@@ -98,7 +98,7 @@ export const Services = () => {
                                 className="flex flex-col h-[320px] md:h-full 
                           md:min-h-[420px] lg:flex-row"
                               >
-                                <ul className="flex flex-col gap-4 pb-8 md:h-[234px] lg:h-auto lg:w-[252px] lg:gap-6">
+                                <ul className="flex flex-col gap-4 mb-8 md:h-[234px] lg:h-auto lg:w-[252px] lg:gap-6">
                                   {servicesLinks &&
                                     servicesLinks.map((link, linkIdx) => (
                                       <li key={linkIdx}>

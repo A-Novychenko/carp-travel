@@ -8,7 +8,7 @@ export const Hero = () => (
       <h1 className="visually-hidden">CarpTravel</h1>
       <div className="md:flex md:gap-12 lg:p-6 lg:gap-[281px]">
         <div className="hidden md:block">
-          <h2 className="ui-title w-[426px] pb-[68px] lg:w-[646px] lg:pb-[148px]">
+          <h2 className="ui-title w-[426px] mb-[68px] lg:w-[646px] lg:mb-[148px]">
             <span className="ui-title-accent block">Uncover&nbsp;</span>
             Carpathian&rsquo;s Secrets
           </h2>
@@ -36,7 +36,7 @@ export const Hero = () => (
         </div>
 
         <div className="md:flex md:flex-col">
-          <div className="flex justify-end pb-6 md:pb-14 lg:pb-[181px]">
+          <div className="flex justify-end mb-6 md:mb-14 lg:mb-[181px]">
             <div className="flex flex-col items-center justify-center">
               <p className="text-37 leading-0.7 md:text-67 md:leading-normal lg:text-98">
                 <span className="font-medium">7</span>

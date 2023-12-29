@@ -1,10 +1,10 @@
 .slogan_mob {
   @apply flex justify-end text-right text-12 font-extralight leading-2 
-  tracking-[2.4px] pb-6 md:hidden;
+  tracking-[2.4px] mb-6 md:hidden;
 }
 .slogan {
   @apply hidden md:block md:text-12 md:font-extralight md:leading-2 
-  md:tracking-[2.4px] md:pb-8;
+  md:tracking-[2.4px] md:mb-8;
 }
 
 .btn {
