@@ -10,7 +10,7 @@ export const Navlinks: React.FC<INavlinksProps> = ({
   handleCloseMenuOnBackdrop,
 }) => {
   return (
-    <nav role="navigation" aria-label="Main">
+    <nav>
       <ul
         className="flex flex-col gap-12 items-center md:flex-row md:gap-6 lg:gap-14"
         onClick={(e: React.MouseEvent) =>

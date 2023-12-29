@@ -1,12 +1,7 @@
 import styles from './About.module.scss';
 
 export const About = () => (
-  <section
-    id="about"
-    className={`${'ui-section'} ${styles.section_bg}`}
-    aria-labelledby="about-heading"
-    aria-describedby="about-description"
-  >
+  <section id="about" className={`${'ui-section'} ${styles.section_bg}`}>
     <div className="ui-container">
       <div className="lg:p-6">
         <div className="md:flex md:justify-between md:pb-16 lg:gap-x-6 lg:pb-0">
@@ -24,7 +19,6 @@ export const About = () => (
               </p>
             </div>
             <p
-              id="about-description"
               className="hidden lg:block text-14 font-extralight leading-1.43 
             md:ml-[241px] md:text-16 md:leading-1.25 lg:leading-[1.34] lg:text-18 lg:ml-0"
             >

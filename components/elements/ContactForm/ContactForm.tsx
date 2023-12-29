@@ -26,13 +26,13 @@ export const ContactForm = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="lg:w-[606px]"
       aria-label="contact-form"
-      role="form"
+      id="contact-form"
     >
       <div className="flex flex-col md:flex-row md:gap-x-5 lg:flex-col">
         <div className="lg:flex lg:justify-between lg:pb-10">
           <label className={styles.label}>
             <span className="inline-block pb-1">Full name</span>
-            <div className="relative">
+            <span className="relative block">
               <input
                 aria-required="true"
                 aria-invalid={errors.name ? 'true' : 'false'}
@@ -66,12 +66,12 @@ export const ContactForm = () => {
                   </span>
                 </div>
               )}
-            </div>
+            </span>
           </label>
 
           <label className={styles.label}>
             <span className="inline-block pb-1">E-mail</span>
-            <div className="relative">
+            <span className="relative block">
               <input
                 aria-required="true"
                 aria-invalid={errors.email ? 'true' : 'false'}
@@ -105,7 +105,7 @@ export const ContactForm = () => {
                   </span>
                 </div>
               )}
-            </div>
+            </span>
           </label>
         </div>
 

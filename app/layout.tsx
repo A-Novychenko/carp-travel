@@ -14,13 +14,6 @@ export const metadata: Metadata = {
   title: 'Carp Travel',
   description:
     'Welcome to the world of CarpTravel! We are a community of passionate carp fishing enthusiasts, offering unique tips, techniques, gear reviews, and camaraderie for anglers of all levels. Discover the best carp fishing spots, the latest gear, helpful advice, and much more. Join our CarpTravel community and dive into the fascinating world of carp fishing.',
-  alternates: {
-    canonical: '/',
-    languages: {
-      'en-UA': '/en-UA',
-      'en-US': '/en-US',
-    },
-  },
   openGraph: {
     title: 'Uncover Carpathian’s Secrets',
     description:

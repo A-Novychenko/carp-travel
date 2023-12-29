@@ -32,7 +32,7 @@ export const ChooseUsForm = () => {
         <div className="md:w-[222px] lg:w-[290px]">
           <label className={styles.label}>
             <span className="inline-block pb-1">Full name</span>
-            <div className="relative">
+            <span className="relative block">
               <input
                 aria-required="true"
                 aria-invalid={errors.name ? 'true' : 'false'}
@@ -58,12 +58,12 @@ export const ChooseUsForm = () => {
                   <span id="nameErrorMessage">{errors.name.message}</span>
                 </div>
               )}
-            </div>
+            </span>
           </label>
 
           <label className={styles.label}>
             <span className="inline-block pb-1">E-mail</span>
-            <div className="relative">
+            <span className="relative block">
               <input
                 aria-required="true"
                 aria-invalid={errors.email ? 'true' : 'false'}
@@ -89,7 +89,7 @@ export const ChooseUsForm = () => {
                   <span id="emailErrorMessage">{errors.email.message}</span>
                 </div>
               )}
-            </div>
+            </span>
           </label>
 
           <label className={styles.label}>
@@ -104,7 +104,7 @@ export const ChooseUsForm = () => {
 
           <label className={styles.label__pb0}>
             <span className="inline-block pb-1">Phone</span>
-            <div className="relative">
+            <span className="relative block">
               <Controller
                 control={control}
                 name="phoneNumber"
@@ -145,7 +145,7 @@ export const ChooseUsForm = () => {
                   <span id="phoneNumberErrorMessage">Incorrect phone</span>
                 </div>
               )}
-            </div>
+            </span>
           </label>
         </div>
 
@@ -161,9 +161,8 @@ export const ChooseUsForm = () => {
 
       <div className="md:flex md:justify-between md:items-start">
         <div className="pb-4 md:pb-0">
-          <label className={styles.label_checkbox} id="consentLabel">
+          <label className={styles.label_checkbox}>
             <input
-              aria-labelledby="consentLabel consentDescription"
               aria-invalid={!consentValue ? 'true' : 'false'}
               className={`${styles.checkbox} visually-hidden`}
               {...register('consent')}
@@ -180,7 +179,7 @@ export const ChooseUsForm = () => {
                 <CheckboxIcon opacity={consentValue ? 1 : 0.1} />
               </span>
             </span>
-            <span className="md:w-[192px] lg:w-[258px]" id="consentDescription">
+            <span className="md:w-[192px] lg:w-[258px]">
               I confirm my consent to the processing of personal data.
             </span>
           </label>

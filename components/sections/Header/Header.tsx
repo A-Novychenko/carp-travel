@@ -6,11 +6,7 @@ export const Header = () => {
   return (
     <div className="absolute w-full top-0 left-0 bg-opacity-0">
       <div className="ui-container">
-        <header
-          className="flex justify-between mt-9 md:mt-6"
-          role="navigation"
-          aria-label="Primary navigation"
-        >
+        <header className="flex justify-between mt-9 md:mt-6">
           <Logo />
           <div className="hidden md:block">
             <Navlinks />

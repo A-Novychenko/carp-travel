@@ -3,15 +3,9 @@ import { JoinBtn } from '@/components/elements/JoinBtn/JoinBtn';
 import styles from './Hero.module.scss';
 
 export const Hero = () => (
-  <section
-    className={styles.section_bg}
-    role="banner"
-    aria-label="Hero Section"
-  >
+  <section className={styles.section_bg}>
     <div className="ui-container">
-      <h1 className="visually-hidden" role="heading" aria-level={1}>
-        CarpTravel
-      </h1>
+      <h1 className="visually-hidden">CarpTravel</h1>
       <div className="md:flex md:gap-12 lg:p-6 lg:gap-[281px]">
         <div className="hidden md:block">
           <h2 className="ui-title w-[426px] pb-[68px] lg:w-[646px] lg:pb-[148px]">
@@ -81,7 +75,7 @@ export const Hero = () => (
             </ul>
           </div>
 
-          <p className={styles.descr} aria-label="Description">
+          <p className={styles.descr}>
             We offer you unforgettable trips to the most beautiful parts of the
             Carpathians. Enjoy stunning views, exciting expeditions, and the
             best service!

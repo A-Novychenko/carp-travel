@@ -5,22 +5,15 @@ import whyUseData from '@/data/whyUsData.json';
 import styles from './Career.module.scss';
 
 export const Career = () => (
-  <section
-    id="career"
-    role="region"
-    aria-label="Career Section"
-    aria-labelledby="career-heading"
-    aria-describedby="career-description"
-  >
+  <section id="career">
     <div className={`${'ui-section'} ${styles.section_bg}`}>
       <div className="ui-container">
         <div className="lg:p-6">
           <div className="md:flex md:pb-[5px] lg:pb-6 lg:items-center">
-            <h2 className="ui-title md:pb-[7px] lg:pb-0" id="career-heading">
+            <h2 className="ui-title md:pb-[7px] lg:pb-0">
               CHOOSE <span className="ui-title-accent">US</span>
             </h2>
             <p
-              id="career-description"
               className="w-180 text-14 font-extralight leading-1.43 ml-auto pb-9 
             md:pb-0 md:w-[221px] md:text-justify md:text-13 md:leading-[1.54]
             lg:w-[293px] lg:text-18 lg:leading-[1.33]"

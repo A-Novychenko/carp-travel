@@ -25,7 +25,7 @@ export const Services = () => {
   };
 
   return (
-    <section id="services" className="ui-section py-0" role="region">
+    <section id="services" className="ui-section py-0">
       <Swiper
         modules={[EffectFade, A11y]}
         slidesPerView={1}
