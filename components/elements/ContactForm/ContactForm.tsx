@@ -1,6 +1,7 @@
 'use client';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 
 import { IncorrectIcon } from '@/components/icons/IncorrectIcon';
 
@@ -10,9 +11,15 @@ export const ContactForm = () => {
   const {
     register,
     handleSubmit,
+    watch,
+    setValue,
+    reset,
     formState: { errors },
   } = useForm<ContactFormInputs>();
-  const onSubmit: SubmitHandler<ContactFormInputs> = data => console.log(data);
+
+  useFormPersist('contactForm', { watch, setValue });
+
+  const onSubmit: SubmitHandler<ContactFormInputs> = () => reset();
 
   return (
     <form

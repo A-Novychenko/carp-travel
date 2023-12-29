@@ -1,6 +1,7 @@
 'use client';
 
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
+import useFormPersist from 'react-hook-form-persist';
 import { PatternFormat } from 'react-number-format';
 
 import { CheckboxIcon } from '@/components/icons/CheckboxIcon';
@@ -14,13 +15,16 @@ export const ChooseUsForm = () => {
     setValue,
     handleSubmit,
     watch,
+    reset,
     control,
     formState: { errors },
   } = useForm<ChooseUsForm>();
-  const onSubmit: SubmitHandler<ChooseUsForm> = data => console.log(data);
+  const onSubmit: SubmitHandler<ChooseUsForm> = () => reset();
 
   const consentValue = watch('consent');
   const phoneNumberValue = watch('phoneNumber');
+
+  useFormPersist('chooseUsForm', { watch, setValue });
 
   return (
     <form className="flex flex-col" onSubmit={handleSubmit(onSubmit)}>
