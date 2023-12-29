@@ -113,7 +113,7 @@ export const ChooseUsForm = () => {
                   minLength: 10,
                 }}
                 render={({ field: { onChange, value } }) => (
-                  <div className="relative">
+                  <span className="relative block">
                     <PatternFormat
                       aria-required="true"
                       aria-invalid={errors.phoneNumber ? 'true' : 'false'}
@@ -132,7 +132,7 @@ export const ChooseUsForm = () => {
                     {!phoneNumberValue && (
                       <span className={styles.input_phone_code}>+38</span>
                     )}
-                  </div>
+                  </span>
                 )}
               />
               {errors.phoneNumber && (

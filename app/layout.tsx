@@ -18,10 +18,18 @@ export const metadata: Metadata = {
     title: 'Uncover Carpathian’s Secrets',
     description:
       'We offer you unforgettable trips to the most beautiful parts of the Carpathians. Enjoy stunning views, exciting expeditions, and the best service!',
-    url: 'https://carp-travel-gamma.vercel.app',
+    url: 'https://carp-travel-n.vercel.app',
     siteName: 'Carp Travel',
     locale: 'en-UA',
     type: 'website',
+    images: [
+      {
+        url: 'https://res.cloudinary.com/dkwbqq1n1/image/upload/v1703852350/asshguyosnrc03qhdo28.png',
+        width: 1200,
+        height: 630,
+        alt: 'mountains',
+      },
+    ],
   },
 };
 

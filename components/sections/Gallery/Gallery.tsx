@@ -18,7 +18,7 @@ export const Gallery = () => (
           {galleryData &&
             galleryData.map(({ path, title }, idx) => (
               <li key={idx} className="pb-6 last:pb-0">
-                <div className="w-280 h-[170px] overflow-hidden">
+                <div className="w-280 h-[170px] overflow-hidden mx-auto">
                   <Image
                     src={path}
                     alt={title}
