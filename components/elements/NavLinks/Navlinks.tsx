@@ -9,6 +9,21 @@ export const Navlinks: React.FC<INavlinksProps> = ({
   handleCloseMenu,
   handleCloseMenuOnBackdrop,
 }) => {
+  const handleClick = () => {
+    handleCloseMenu ? handleCloseMenu() : null;
+  };
+
+  const handleKeyDown = (e: React.KeyboardEvent, to: string) => {
+    if (e.key === 'Enter') {
+      handleCloseMenu ? handleCloseMenu() : null;
+      scroller.scrollTo(to, {
+        spy: true,
+        smooth: true,
+        duration: 800,
+      });
+    }
+  };
+
   return (
     <nav>
       <ul
@@ -28,18 +43,9 @@ export const Navlinks: React.FC<INavlinksProps> = ({
                 spy={true}
                 smooth={true}
                 duration={800}
-                onClick={() => {
-                  handleCloseMenu ? handleCloseMenu() : null;
-                }}
+                onClick={handleClick}
                 onKeyDown={e => {
-                  if (e.key === 'Enter') {
-                    handleCloseMenu ? handleCloseMenu() : null;
-                    scroller.scrollTo(to, {
-                      spy: true,
-                      smooth: true,
-                      duration: 800,
-                    });
-                  }
+                  handleKeyDown(e, to);
                 }}
               >
                 {name}

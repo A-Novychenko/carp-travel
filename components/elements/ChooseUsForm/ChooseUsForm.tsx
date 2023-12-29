@@ -19,7 +19,10 @@ export const ChooseUsForm = () => {
     control,
     formState: { errors },
   } = useForm<ChooseUsForm>();
-  const onSubmit: SubmitHandler<ChooseUsForm> = () => reset();
+  const onSubmit: SubmitHandler<ChooseUsForm> = () => {
+    reset();
+    setValue('phoneNumber', '');
+  };
 
   const consentValue = watch('consent');
   const phoneNumberValue = watch('phoneNumber');
