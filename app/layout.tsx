@@ -9,10 +9,10 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(`https://${process.env.VERCEL_URL}`),
   title: 'Carp Travel',
   description:
     'Welcome to the world of CarpTravel! We are a community of passionate carp fishing enthusiasts, offering unique tips, techniques, gear reviews, and camaraderie for anglers of all levels. Discover the best carp fishing spots, the latest gear, helpful advice, and much more. Join our CarpTravel community and dive into the fascinating world of carp fishing.',
-  metadataBase: new URL('https://acme.com'),
   alternates: {
     canonical: '/',
     languages: {

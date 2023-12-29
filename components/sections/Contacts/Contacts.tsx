@@ -60,6 +60,7 @@ export const Contacts = () => (
                     href="https://www.facebook.com"
                     className="link-transition"
                     target="_blank"
+                    rel="noopener noreferrer nofollow"
                   >
                     facebook
                   </Link>
@@ -69,6 +70,7 @@ export const Contacts = () => (
                     href="https://www.instagram.com"
                     className="link-transition"
                     target="_blank"
+                    rel="noopener noreferrer nofollow"
                   >
                     instagram
                   </Link>
@@ -78,6 +80,7 @@ export const Contacts = () => (
                     href="https://www.youtube.com"
                     className="link-transition"
                     target="_blank"
+                    rel="noopener noreferrer nofollow"
                   >
                     youtube
                   </Link>
@@ -87,6 +90,7 @@ export const Contacts = () => (
                     href="https://www.tiktok.com/"
                     className="link-transition"
                     target="_blank"
+                    rel="noopener noreferrer nofollow"
                   >
                     tiktok
                   </Link>
