@@ -5,23 +5,22 @@ import { Link, scroller } from 'react-scroll';
 
 import links from '@/data/linkList.json';
 
+const handleKeyDown = (e: React.KeyboardEvent, to: string) => {
+  if (e.key === 'Enter') {
+    scroller.scrollTo(to, {
+      spy: true,
+      smooth: true,
+      duration: 800,
+    });
+  }
+};
+
 export const Navlinks: React.FC<INavlinksProps> = ({
   handleCloseMenu,
   handleCloseMenuOnBackdrop,
 }) => {
   const handleClick = () => {
     handleCloseMenu ? handleCloseMenu() : null;
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent, to: string) => {
-    if (e.key === 'Enter') {
-      handleCloseMenu ? handleCloseMenu() : null;
-      scroller.scrollTo(to, {
-        spy: true,
-        smooth: true,
-        duration: 800,
-      });
-    }
   };
 
   return (
@@ -45,6 +44,7 @@ export const Navlinks: React.FC<INavlinksProps> = ({
                 duration={800}
                 onClick={handleClick}
                 onKeyDown={e => {
+                  handleCloseMenu ? handleCloseMenu() : null;
                   handleKeyDown(e, to);
                 }}
               >

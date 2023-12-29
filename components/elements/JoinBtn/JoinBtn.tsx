@@ -4,17 +4,17 @@ import { Button, scroller } from 'react-scroll';
 
 import styles from './JoinBtn.module.scss';
 
-export const JoinBtn = () => {
-  const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter') {
-      scroller.scrollTo('contacts', {
-        spy: true,
-        smooth: true,
-        duration: 800,
-      });
-    }
-  };
+const handleKeyDownToContact = (e: React.KeyboardEvent) => {
+  if (e.key === 'Enter') {
+    scroller.scrollTo('contacts', {
+      spy: true,
+      smooth: true,
+      duration: 800,
+    });
+  }
+};
 
+export const JoinBtn = () => {
   return (
     <Button
       type="button"
@@ -26,7 +26,7 @@ export const JoinBtn = () => {
       smooth={true}
       duration={800}
       onKeyDown={e => {
-        handleKeyDown(e);
+        handleKeyDownToContact(e);
       }}
     >
       JOIN NOW
