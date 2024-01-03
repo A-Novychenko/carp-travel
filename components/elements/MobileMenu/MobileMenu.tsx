@@ -31,6 +31,7 @@ export const MobileMenu = () => {
     <>
       {!isOpen ? (
         <button
+          type="button"
           className={styles.menu_btn}
           onClick={handleOpenMenu}
           aria-expanded={isOpen}
@@ -45,6 +46,7 @@ export const MobileMenu = () => {
           >
             <div className="ui-container">
               <button
+                type="button"
                 className="block absolute top-[43px] right-[20px] text-14 tracking-[1.4px] uppercase"
                 onClick={handleCloseMenu}
               >

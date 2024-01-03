@@ -2,20 +2,39 @@
   @apply flex justify-end text-right text-12 font-extralight leading-2 
   tracking-[2.4px] mb-6 md:hidden;
 }
-.slogan {
+.slogan_tab {
   @apply hidden md:block md:text-12 md:font-extralight md:leading-2 
-  md:tracking-[2.4px] md:mb-8;
+  md:tracking-[2.4px] lg:hidden;
+}
+.slogan_desktop {
+  @apply hidden text-12 font-extralight leading-2 
+  tracking-[2.4px] lg:block lg:absolute lg:top-0 lg:left-[312px] lg:whitespace-nowrap;
 }
 
 .btn {
-  @apply text-20 font-extralight leading-0.85 uppercase opacity-50 
-  transition-all hover:pl-2 focus:pl-2 md:text-22 md:leading-[0.82] md:text-left
-  lg:text-[28px] lg:leading-[0.86];
+  @apply text-20 font-extralight uppercase opacity-50 
+  transition-all inline-flex items-center 
+  md:text-22 md:text-left
+  lg:text-[28px]  
+  hover:pl-2 hover:opacity-100 
+  focus:opacity-100 focus:outline-none focus:font-medium;
+
+  &:focus::before {
+    display: block;
+
+    content: '';
+    width: 6px;
+    height: 6px;
+    margin-right: 8px;
+
+    background-image: url('../../../public/icons/active-icon.svg');
+    background-size: cover;
+  }
 }
 
 .active_btn {
   @apply text-20 font-medium leading-0.85 uppercase flex items-center
-  md:text-22 md:leading-[0.82] md:text-left lg:text-[28px] lg:leading-[0.86];
+  md:text-22 md:leading-[0.82] md:text-left lg:text-[28px] lg:leading-[0.86] focus:outline-none;
 
   &::before {
     display: block;
