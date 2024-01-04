@@ -6,6 +6,7 @@ import useFormPersist from 'react-hook-form-persist';
 import { IncorrectIcon } from '@/components/icons/IncorrectIcon';
 
 import styles from './ContactForm.module.scss';
+import toast from 'react-hot-toast';
 
 export const ContactForm = () => {
   const {
@@ -19,7 +20,10 @@ export const ContactForm = () => {
 
   useFormPersist('contactForm', { watch, setValue });
 
-  const onSubmit: SubmitHandler<ContactFormInputs> = () => reset();
+  const onSubmit: SubmitHandler<ContactFormInputs> = () => {
+    toast.success('Successfully toasted!');
+    reset();
+  };
 
   return (
     <form

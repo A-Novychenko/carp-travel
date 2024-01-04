@@ -10,13 +10,13 @@ export const Career = () => (
       <div className="ui-container">
         <div className="lg:p-6">
           <div className="md:flex md:mb-[5px] lg:mb-6 lg:items-center">
-            <h2 className="ui-title md:mb-[7px] lg:mb-0">
-              CHOOSE <span className="ui-title-accent">US</span>
+            <h2 className="ui-title md:leading-[1.2] md:mb-[7px] lg:mb-0">
+              CHOOSE <span className="ui-title-accent inline-block">US</span>
             </h2>
             <p
               className="w-180 text-14 font-extralight leading-1.43 ml-auto mb-9 
-            md:mb-0 md:w-[221px] md:text-justify md:text-13 md:leading-[1.54]
-            lg:w-[293px] lg:text-18 lg:leading-[1.33]"
+             md:h-min md:mb-0 md:mt-2 md:w-[221px] md:text-justify md:text-13 md:leading-[1.54]
+            lg:w-[293px] lg:text-18 lg:leading-[1.33] lg:mt-4 lg:mb-[7px]"
             >
               Your chance to join our passionate team in Carpathian tourism.
               Seeking talented professionals to share our common mission.
@@ -45,14 +45,14 @@ export const Career = () => (
                         <p
                           id={`advantage-heading-${idx}`}
                           className="text-right text-14 font-normal leading-1.43 mb-2 
-                    md:text-16 md:leading-1.25 lg:ml-auto lg:text-18 lg:leading-[1.33]"
+                    md:text-16 md:leading-1.25 lg:mb-0 lg:ml-auto lg:text-18 lg:leading-[1.33]"
                         >
                           {advantages}
                         </p>
                         <p
                           id={`advantage-description-${idx}`}
-                          className="text-right text-12 font-extralight leading-1.6 mb-4 md:mb-6 
-                        lg:w-[290px] lg:ml-6 lg:text-left lg:leading-2"
+                          className="text-right text-12 font-extralight leading-[1.67] mb-4 md:mb-0 
+                        lg:w-[290px] lg:ml-6 lg:mb-6 lg:text-left lg:leading-2"
                         >
                           {description}
                         </p>

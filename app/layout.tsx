@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 import { Header } from '@/components/sections/Header/Header';
 
 import './globals.css';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -44,6 +45,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
         {children}
+        <Toaster />
       </body>
     </html>
   );

@@ -82,7 +82,7 @@ export const Services = () => {
 
                             <div className="md:flex md:gap-5 md:items-center lg:items-stretch">
                               <div
-                                className="h-[213px] mb-[12px] sm:w-[440px] sm:h-[311px]
+                                className="mb-[12px] sm:w-[440px] sm:h-[311px]
                                md:w-[463px] md:h-[370px] md:mb-0 lg:w-[607px] lg:h-[429px] lg:m-0"
                               >
                                 <Image
@@ -90,8 +90,7 @@ export const Services = () => {
                                   alt={title}
                                   width={607}
                                   height={429}
-                                  className="block w-full h-full sm:w-full sm:h-full object-cover"
-                                  sizes="(min-width: 1440px)607px, (min-width: 768px) 463px, 100vw"
+                                  className="block w-full min-h-[213px] h-full object-cover"
                                 />
                               </div>
 

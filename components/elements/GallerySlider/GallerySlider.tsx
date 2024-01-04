@@ -68,7 +68,7 @@ export const GallerySlider = () => (
         <SwiperSlide key={idx}>
           {({ isActive }) => (
             <div
-              className={`w-[415px] h-[294px] md:mx-auto lg:w-[606px] lg:h-[432px] ${
+              className={`w-[415px] h-[294px] md:mx-auto lg:w-[606px] lg:h-[429px] ${
                 !isActive
                   ? 'md:relative md:after:absolute md:after:top-0 md:after:left-0 md:after:w-full md:after:h-full md:after:bg-bgc75 md:shadow-img-gallery'
                   : ''

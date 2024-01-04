@@ -14,15 +14,16 @@ export const Gallery = () => (
           OUR <span className="ui-title-accent">GALLERY</span>
         </h2>
 
-        <ul className="block md:hidden">
+        <ul className="flex flex-col gap-6 md:hidden">
           {galleryData &&
-            galleryData.map(({ path, title }, idx) => (
-              <li key={idx} className="mb-6 last:mb-0">
-                <div className="w-280 h-[170px] overflow-hidden mx-auto">
+            galleryData.map(({ pathMob, title }, idx) => (
+              <li key={idx}>
+                <div className="w-full">
                   <Image
-                    src={path}
+                    src={pathMob}
                     alt={title}
                     width={280}
+                    height={187}
                     className="block w-full h-auto object-cover"
                   />
                 </div>

@@ -3,6 +3,7 @@
 import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import useFormPersist from 'react-hook-form-persist';
 import { PatternFormat } from 'react-number-format';
+import toast from 'react-hot-toast';
 
 import { CheckboxIcon } from '@/components/icons/CheckboxIcon';
 import { IncorrectIcon } from '@/components/icons/IncorrectIcon';
@@ -20,6 +21,7 @@ export const ChooseUsForm = () => {
     formState: { errors },
   } = useForm<ChooseUsForm>();
   const onSubmit: SubmitHandler<ChooseUsForm> = () => {
+    toast.success('Successfully toasted!');
     reset();
     setValue('phoneNumber', '');
   };
@@ -124,7 +126,9 @@ export const ChooseUsForm = () => {
                         errors.email ? 'phoneNumberError' : undefined
                       }
                       className={styles.input_phone}
-                      style={{ color: errors.phoneNumber ? '#FF5757' : '#FFF' }}
+                      style={{
+                        color: errors.phoneNumber ? '#FF5757' : '#FFF',
+                      }}
                       format="+38 (###) ## ## ###"
                       onValueChange={(values: any) => {
                         onChange(values.value);
@@ -190,12 +194,10 @@ export const ChooseUsForm = () => {
 
         <button
           aria-label="Submit form"
-          aria-disabled={!consentValue ? 'true' : 'false'}
-          className={`block ml-auto text-30 font-medium uppercase md:text-center md:leading-none lg:text-33 ${
-            !consentValue ? 'opacity-20' : 'link-transition'
-          }`}
+          className={
+            'block ml-auto text-30 font-medium uppercase md:text-center md:leading-none lg:text-33'
+          }
           type="submit"
-          disabled={!consentValue}
         >
           Send
         </button>
